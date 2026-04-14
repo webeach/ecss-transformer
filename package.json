@@ -1,6 +1,6 @@
 {
   "name": "@ecss/transformer",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "ECSS transformer — converts ECSS AST to CSS, JS bindings and TypeScript declarations.",
   "keywords": [
     "ast",
