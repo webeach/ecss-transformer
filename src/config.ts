@@ -19,7 +19,7 @@ export interface EcssConfig {
    */
   classTemplate?: string;
   /**
-   * When `true`, the unplugin generates a `.ecss.d.ts` declaration file
+   * When `true`, the build plugin generates a `.ecss.d.ts` declaration file
    * alongside each `.ecss` source for IDE support (e.g. Svelte language tools).
    */
   generateDeclarations?: boolean;

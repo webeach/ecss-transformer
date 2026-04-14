@@ -292,7 +292,7 @@ export default styles;
 
 ## 🏃 Runtime (`@ecss/transformer/runtime`)
 
-A minimal runtime for computing element attributes on the client. Normally consumed via the `virtual:ecss/runtime` virtual module provided by `@ecss/unplugin`, but can also be imported directly.
+A minimal runtime for computing element attributes on the client. Normally consumed via the `virtual:ecss/runtime` virtual module provided by `@ecss/vite-plugin`, but can also be imported directly.
 
 ### `_h(className, params, classFields)`
 

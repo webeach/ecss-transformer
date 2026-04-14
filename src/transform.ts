@@ -42,7 +42,7 @@ export function transform(
 /**
  * Generates only the `.d.ts` declaration string for an ECSS AST.
  *
- * Useful when the unplugin needs to produce a sidecar `.ecss.d.ts` file
+ * Useful when the build plugin needs to produce a sidecar `.ecss.d.ts` file
  * for IDE support without re-running the full transform.
  *
  * @param ast    Parsed ECSS stylesheet.

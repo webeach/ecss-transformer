@@ -292,7 +292,7 @@ export default styles;
 
 ## 🏃 Runtime (`@ecss/transformer/runtime`)
 
-Минималистичный рантайм для вычисления атрибутов на клиенте. Обычно используется через виртуальный модуль `virtual:ecss/runtime` из `@ecss/unplugin`, но можно подключить напрямую.
+Минималистичный рантайм для вычисления атрибутов на клиенте. Обычно используется через виртуальный модуль `virtual:ecss/runtime` из `@ecss/vite-plugin`, но можно подключить напрямую.
 
 ### `_h(className, params, classFields)`
 
