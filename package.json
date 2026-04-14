@@ -1,0 +1,105 @@
+{
+  "name": "@ecss/transformer",
+  "version": "0.0.0",
+  "description": "ECSS transformer — converts ECSS AST to CSS, JS bindings and TypeScript declarations.",
+  "keywords": [
+    "ast",
+    "css",
+    "ecss",
+    "transform",
+    "transformer",
+    "typescript"
+  ],
+  "homepage": "https://ecss.webea.ch",
+  "bugs": {
+    "url": "https://github.com/webeach/ecss-transformer/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Ruslan Martynov",
+    "email": "github@webea.ch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webeach/ecss-transformer"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "main": "dist/index.cjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./runtime": {
+      "import": {
+        "types": "./dist/runtime/index.d.ts",
+        "default": "./dist/runtime/index.js"
+      },
+      "require": {
+        "types": "./dist/runtime/index.d.cts",
+        "default": "./dist/runtime/index.cjs"
+      }
+    }
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "lint": "oxlint .",
+    "lint:fix": "oxlint --fix .",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "release": "semantic-release",
+    "prepare": "is-ci || husky"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^20.0.0",
+    "@commitlint/config-conventional": "^20.0.0",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^13.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^11.0.6",
+    "@semantic-release/npm": "^12.0.2",
+    "@semantic-release/release-notes-generator": "^14.1.0",
+    "@types/node": "^25.6.0",
+    "husky": "^9.1.7",
+    "is-ci": "^4.1.0",
+    "lint-staged": "^16.1.6",
+    "oxfmt": "^0.36.0",
+    "oxlint": "^1.51.0",
+    "semantic-release": "^24.2.9",
+    "tsup": "^8",
+    "typescript": "^5.9.2",
+    "vitest": "^4.1.4"
+  },
+  "lint-staged": {
+    "**/*.{cjs,cts,js,jsx,mjs,mts,ts,tsx}": [
+      "oxlint --fix",
+      "oxfmt"
+    ],
+    "**/*.json": [
+      "oxfmt"
+    ]
+  },
+  "engines": {
+    "node": ">=22.0.0",
+    "pnpm": "^10"
+  },
+  "packageManager": "pnpm@10.7.1"
+}
